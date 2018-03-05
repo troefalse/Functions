@@ -10,7 +10,7 @@ ODIR=obj
 #DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
 EDITFILE=test
-FILES=test
+FILES=test memory_list
 FMAIN=main
 _FNAMES=$(FILES) $(FMAIN)
 OBJ=$(patsubst %,$(ODIR)/%.o,$(_FNAMES))
