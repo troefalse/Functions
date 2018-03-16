@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "memory_list.h"
+#include "print.h"
+#include "primes.h"
 
 #include "test.h"
+
+#define LIST_EXTENSION_LENGTH 10
 
 int main(int argc, char ** argv){
 	if (argc != 2){
@@ -13,14 +17,17 @@ int main(int argc, char ** argv){
 
 	linkedNode_t * headNode = nodeConstructor(headNode);
 
-	int * list = memAlloc(headNode, list, 10);
-	list[1] = 34;
+	int * primenumbers = memAlloc(headNode, primenumbers, LIST_EXTENSION_LENGTH);
+	int length = prime_generator(primenumbers, inputNum);
 
-	printf("elem: %d\n", ((int*) (headNode->pointer))[1]);
+//	printf("elem: %d\n", ((int*) (headNode->pointer))[1]);
+	print_list(primenumbers, length);
+
+
+
+
 	freeLinkedList(headNode);
 
-
-
-	printf("last: %d\n", list[1]);
+//	printf("last: %d\n", primenumbers[1]);
 	return 0;
 }

@@ -9,8 +9,8 @@ ODIR=obj
 #_DEPS=test.h
 #DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
-EDITFILE=test
-FILES=test memory_list
+EDITFILE=primes
+FILES=test memory_list print primes
 FMAIN=main
 _FNAMES=$(FILES) $(FMAIN)
 OBJ=$(patsubst %,$(ODIR)/%.o,$(_FNAMES))
