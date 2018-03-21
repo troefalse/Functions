@@ -4,8 +4,6 @@
 #include "print.h"
 #include "primes.h"
 
-#include "test.h"
-
 #define LIST_EXTENSION_LENGTH 10
 
 int main(int argc, char ** argv){

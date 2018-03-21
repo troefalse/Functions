@@ -2,9 +2,9 @@
 #include <math.h>
 //#include "memory_list.h"
 
-#define MAXIMUM_INPUT 100 //todo: take as function input. 
-#define LIST_LENGTH MAXIMUM_INPUT/2 //todo: dynamic reallocate length. 
-#define LIST_APPEND_LENGTH 10
+//#define MAXIMUM_INPUT 100 //todo: take as function input. 
+//#define LIST_LENGTH MAXIMUM_INPUT/2 //todo: dynamic reallocate length. 
+//#define LIST_APPEND_LENGTH 10
 
 
 
