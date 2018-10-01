@@ -2,9 +2,8 @@
 #include <math.h>
 //#include "memory_list.h"
 
-//#define MAXIMUM_INPUT 100 //todo: take as function input. 
-//#define LIST_LENGTH MAXIMUM_INPUT/2 //todo: dynamic reallocate length. 
-//#define LIST_APPEND_LENGTH 10
+//todo: dynamic reallocate length. 
+//#define LIST_RESIZE_LENGTH 10
 
 
 
@@ -19,8 +18,8 @@ void append_if_prime(int primecandidate, int * primelist, int * length, int sqin
 	//Is a prime. 
 	primelist[(*length)] = primecandidate;
 	(*length)++;
-//	if ( (*length) > noe ){
-//		realloc LIST_APPEND_LENGTH
+//	if ( (*length) % LIST_APPEND_LENGTH < 1 ){
+//		primelist = realloc(primelist, sizeof(primelist) * primelist + LIST_APPEND_LENGTH);
 //	}
 }
 
@@ -36,7 +35,7 @@ int prime_generator(int * primenumbers, int highestCandidate){
 	}
 
 	//Initialize variables. 
-//	int * primenumbers = mem_alloc(primenumbers, LIST_LENGTH];
+//	int * primenumbers = mem_alloc(primenumbers, LIST_RESIZE_LENGTH];
 	int current_length = 1; //List contains one element. 
 	int high_value = 4; 	//First prime squared. 
 	int high_index = 1; 	//Inner for-loop end point. Points to sqrt(high_value)+1. Used because any not-prime number can be represented as a product of primes. 
